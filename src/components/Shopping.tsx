@@ -61,6 +61,7 @@ const ShoppingApp: React.FC = () => {
     }
   };
 
+  //Filter out the deleted item by its ID
   const handleDelete = (id: number) => {
     setItems(items.filter((item) => item.id !== id));
   };
