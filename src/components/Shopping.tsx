@@ -8,6 +8,7 @@ interface Item {
   total: number;
 }
 
+//c
 const ShoppingApp: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [name, setName] = useState("");
