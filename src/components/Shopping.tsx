@@ -32,6 +32,7 @@ const ShoppingApp: React.FC = () => {
           item.id === editingId ? { ...item, name, quantity, price, total } : item
         )
       );
+      //check If no editingId, we create a new Item with a unique timestamp ID and append it to the list using the spread operator ...
       setEditingId(null);
     } else {
       const newItem: Item = {
