@@ -19,9 +19,8 @@ const ShoppingApp: React.FC = () => {
   const [editingId, setEditingId] = useState<number | null>(null);
 
   const handleAddOrEditItem = () => {
-     //add validation - If the user leaves any field blank or enters zero/negative numbers, the function exits.
-    if (!name || quantity <= 0 || price <= 0) 
-        return;
+    //add validation - If the user leaves any field blank or enters zero/negative numbers, the function exits.
+    if (!name || quantity <= 0 || price <= 0) return;
     //Calculate total
     const total = quantity * price;
 
@@ -29,8 +28,10 @@ const ShoppingApp: React.FC = () => {
     if (editingId !== null) {
       setItems((prev) =>
         prev.map((item) =>
-          item.id === editingId ? { ...item, name, quantity, price, total } : item
-        )
+          item.id === editingId
+            ? { ...item, name, quantity, price, total }
+            : item,
+        ),
       );
       //check If no editingId, we create a new Item with a unique timestamp ID and append it to the list using the spread operator ...
       setEditingId(null);
@@ -44,7 +45,7 @@ const ShoppingApp: React.FC = () => {
       };
       setItems((prev) => [...prev, newItem]);
     }
-//reset everything- After adding or editing- all input fields are cleared
+    //reset everything- After adding or editing- all input fields are cleared
     setName("");
     setQuantity(0);
     setPrice(0);
@@ -74,7 +75,7 @@ const ShoppingApp: React.FC = () => {
     <div className="shopping-container">
       <h2 className="title">Shopping List</h2>
 
-{/* 
+      {/* 
   Each input field is tied to a state variable (name, quantity, price) using the value and onChange attributes- When you type, React updates the state, and vice versa.
 */}
       <div className="input-section">
@@ -116,13 +117,12 @@ const ShoppingApp: React.FC = () => {
         </button>
       </div>
 
-{/* 
+      {/* 
   Display each added item dynamically.
   Using .map() to render a <tr> for each Item.
   key={item.id} ensures React can track updates properly.
   If there are no items, a fallback message appears.
 */}
-
 
       <table className="table">
         <thead>
@@ -144,7 +144,10 @@ const ShoppingApp: React.FC = () => {
                 <td>{item.price}</td>
                 <td>{item.total}</td>
                 <td>
-                  <button className="btn edit-btn" onClick={() => handleEdit(item.id)}>
+                  <button
+                    className="btn edit-btn"
+                    onClick={() => handleEdit(item.id)}
+                  >
                     Edit
                   </button>
                   <button
@@ -166,7 +169,7 @@ const ShoppingApp: React.FC = () => {
         </tbody>
       </table>
 
-{/* grandTotal updates automatically as items are added, edited, or removed*/}
+      {/* grandTotal updates automatically as items are added, edited, or removed*/}
       <h3 className="grand-total">Grand Total: {grandTotal}</h3>
     </div>
   );

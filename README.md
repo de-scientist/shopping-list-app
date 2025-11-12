@@ -7,12 +7,12 @@ This app lets you **add, edit, delete** items and automatically calculates both 
 
 ## ✨ Features
 
-- 🧾 Add new shopping items with quantity and price per quantity  
-- ✏️ Edit existing items inline  
-- ❌ Delete items dynamically  
-- 💰 Automatic calculation of total per item and overall grand total  
-- 🎨 Sketch-style UI inspired by handwritten notes  
-- 🧠 Built using React Hooks (`useState`) for state management  
+- 🧾 Add new shopping items with quantity and price per quantity
+- ✏️ Edit existing items inline
+- ❌ Delete items dynamically
+- 💰 Automatic calculation of total per item and overall grand total
+- 🎨 Sketch-style UI inspired by handwritten notes
+- 🧠 Built using React Hooks (`useState`) for state management
 
 ---
 
@@ -28,6 +28,7 @@ This app lets you **add, edit, delete** items and automatically calculates both 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/your-username/shopping-list-app.git
 cd shopping-list-app
@@ -74,3 +75,4 @@ LinkedIn | Portfolio
 This project is open-source and available under the MIT License.
 
 “Every line of code should feel like poetry — simple, purposeful, and alive.”
+```
