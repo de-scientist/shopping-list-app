@@ -25,6 +25,7 @@ const ShoppingApp: React.FC = () => {
     //Calculate total
     const total = quantity * price;
 
+    //check if editingId exists, we update that specific item by mapping over the existing array and replacing it with the new values
     if (editingId !== null) {
       setItems((prev) =>
         prev.map((item) =>
