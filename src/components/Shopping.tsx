@@ -74,7 +74,9 @@ const ShoppingApp: React.FC = () => {
     <div className="shopping-container">
       <h2 className="title">Shopping List</h2>
 
-//Each input field is tied to a state variable (name, quantity, price) using the value and onChange attributes- When you type, React updates the state, and vice versa.
+{/* 
+  Each input field is tied to a state variable (name, quantity, price) using the value and onChange attributes- When you type, React updates the state, and vice versa.
+*/}
       <div className="input-section">
         <div className="input-group">
           <label>Item</label>
@@ -114,7 +116,14 @@ const ShoppingApp: React.FC = () => {
         </button>
       </div>
 
-{/*Display each added item dynamically-Using .map() to render a <tr> for each Item.-key={item.id} ensures React can track updates properly.- If there are no items, a fallback message appears.*/}
+{/* 
+  Display each added item dynamically.
+  Using .map() to render a <tr> for each Item.
+  key={item.id} ensures React can track updates properly.
+  If there are no items, a fallback message appears.
+*/}
+
+
       <table className="table">
         <thead>
           <tr>
@@ -157,7 +166,7 @@ const ShoppingApp: React.FC = () => {
         </tbody>
       </table>
 
-//grandTotal updates automatically as items are added, edited, or removed
+{/* grandTotal updates automatically as items are added, edited, or removed*/}
       <h3 className="grand-total">Grand Total: {grandTotal}</h3>
     </div>
   );
