@@ -44,12 +44,13 @@ const ShoppingApp: React.FC = () => {
       };
       setItems((prev) => [...prev, newItem]);
     }
-//reset everything After adding or editing- all input fields are cleared
+//reset everything- After adding or editing- all input fields are cleared
     setName("");
     setQuantity(0);
     setPrice(0);
   };
 
+  //Set editingId so the app knows it’s in “edit mode” next time you click “Add Item”.
   const handleEdit = (id: number) => {
     const itemToEdit = items.find((item) => item.id === id);
     if (itemToEdit) {
