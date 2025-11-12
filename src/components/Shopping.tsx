@@ -1,6 +1,7 @@
 //import useState to create and manage local state variables
 import React, { useState } from "react";
 
+//add an Item interface that defines the structure for each item in the list
 interface Item {
   id: number;
   name: string;
