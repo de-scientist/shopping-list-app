@@ -69,11 +69,12 @@ const ShoppingApp: React.FC = () => {
   //use reduce() which goes through every item’s total and sums them up.-grandTotal is displayed dynamically — if you edit or delete an item, it updates instantly.
   const grandTotal = items.reduce((sum, item) => sum + item.total, 0);
 
-  //return (JSX Layout)
+  //return (JSX Layout)-which returns statements that define the structure and UI
   return (
     <div className="shopping-container">
       <h2 className="title">Shopping List</h2>
 
+//Each input field is tied to a state variable (name, quantity, price) using the value and onChange attributes- When you type, React updates the state, and vice versa.
       <div className="input-section">
         <div className="input-group">
           <label>Item</label>
