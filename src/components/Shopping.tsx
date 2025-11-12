@@ -1,3 +1,4 @@
+//import useState to create and manage local state variables
 import React, { useState } from "react";
 
 interface Item {
