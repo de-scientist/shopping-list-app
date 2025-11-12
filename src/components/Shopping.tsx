@@ -157,6 +157,7 @@ const ShoppingApp: React.FC = () => {
         </tbody>
       </table>
 
+//grandTotal updates automatically as items are added, edited, or removed
       <h3 className="grand-total">Grand Total: {grandTotal}</h3>
     </div>
   );
