@@ -10,7 +10,7 @@ interface Item {
   total: number;
 }
 
-//c
+//Set Up State with useState - Each of these states is reactive — any update triggers an automatic UI re-render
 const ShoppingApp: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [name, setName] = useState("");
