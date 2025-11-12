@@ -69,6 +69,7 @@ const ShoppingApp: React.FC = () => {
   //use reduce() which goes through every item’s total and sums them up.-grandTotal is displayed dynamically — if you edit or delete an item, it updates instantly.
   const grandTotal = items.reduce((sum, item) => sum + item.total, 0);
 
+  //return (JSX Layout)
   return (
     <div className="shopping-container">
       <h2 className="title">Shopping List</h2>
