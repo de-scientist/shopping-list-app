@@ -114,6 +114,7 @@ const ShoppingApp: React.FC = () => {
         </button>
       </div>
 
+{/*Display each added item dynamically-Using .map() to render a <tr> for each Item.-key={item.id} ensures React can track updates properly.- If there are no items, a fallback message appears.*/}
       <table className="table">
         <thead>
           <tr>
