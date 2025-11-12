@@ -20,7 +20,9 @@ const ShoppingApp: React.FC = () => {
 
   const handleAddOrEditItem = () => {
      //add validation - If the user leaves any field blank or enters zero/negative numbers, the function exits.
-    if (!name || quantity <= 0 || price <= 0) return;
+    if (!name || quantity <= 0 || price <= 0) 
+        return;
+    //Calculate total
     const total = quantity * price;
 
     if (editingId !== null) {
