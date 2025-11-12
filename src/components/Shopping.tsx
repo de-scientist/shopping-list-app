@@ -44,7 +44,7 @@ const ShoppingApp: React.FC = () => {
       };
       setItems((prev) => [...prev, newItem]);
     }
-
+//reset everything After adding or editing- all input fields are cleared
     setName("");
     setQuantity(0);
     setPrice(0);
